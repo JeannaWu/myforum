@@ -13,7 +13,8 @@ class UsersController < ApplicationController
                                   :password, :password_confirmation)
      @user = User.new(params[:user])
      if @user.save
-          flash[:success] = "Welcome to the Twitter App!"    # NEW LINE
+          remember @user       #  NEW LINE
+          flash[:success] = "Welcome to the Sample App!"      # NEW LINE
           redirect_to @user
         else
           render 'new'
