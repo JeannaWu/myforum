@@ -5,7 +5,8 @@ class StaticPagesController < ApplicationController
   def help
   end
 
-def about      # NEW
+def about      
+	flash[:notice] = "Testing the flash"
   end
   
 end
